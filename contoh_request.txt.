@@ -1,0 +1,22 @@
+untuk table artikel  :
+{
+"id_category" : "test",
+"stockcode" : "test",
+"title" : "test",
+"content" : "test",
+"seotitle" : "test",
+"tags" : "test",
+"tag" : "test",
+"date" : "2023-01-22 12:12",
+"time" : "2023-01-22 12:12",
+"editor" : "test",
+"protect" : "test",
+"active" : "1",
+"headline" : "1",
+"picture" : "test",
+"hits" : "1",
+"new_version" : "test"
+}
+
+contoh request untuk halaman :
+   data halaman
