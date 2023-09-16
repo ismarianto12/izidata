@@ -14,7 +14,7 @@ Route::group(['middleware' => ['cors']], function () {
     });
 });
 
-Route::group(['middleware' => ['jwt.verify']], function () {
+Route::group(['middleware' => ['jwt.verify', 'cors']], function () {
     Route::prefix('api/v1')->group(function () {
         Route::post('transaction', [TransactionController::class, 'processTransaction'])->name('transaction');
         Route::prefix('transaction')->group(function () {

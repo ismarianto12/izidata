@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "0297ce9f-fdb5-4404-85ee-a8e90b2ddca3",
+		"name": "HOST TO HOS PAYMEN IZIDATA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/v1/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/v1/auth/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2l6aWRhdGFcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2OTQ4MDA1MjIsIm5iZiI6MTY5NDgwMDUyMiwianRpIjoiS0haZ3FBYUFaanJPZnNHSCIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.RuHePyQ-YGWgqho5zHMyWh8n2BIy3T67lmZptChUUrM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/v1/transaction",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2l6aWRhdGFcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2OTQ4MDA1MjIsIm5iZiI6MTY5NDgwMDUyMiwianRpIjoiS0haZ3FBYUFaanJPZnNHSCIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.RuHePyQ-YGWgqho5zHMyWh8n2BIy3T67lmZptChUUrM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/v1/transaction/get?page=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"transaction",
+						"get"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
