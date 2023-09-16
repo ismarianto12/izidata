@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\balance as Balance;
 use App\Models\transaction;
+// use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Validator;
-// Add this line
+use Validator;
 
 class TransactionController extends Controller
 {
@@ -117,6 +118,12 @@ class TransactionController extends Controller
 
     public function getTransactions(Request $request)
     {
+        if($request->page ==''){
+            return response()->json([
+                'messages'=>'parameter page wajib',
+                'status'=>'400'
+            ],400);
+        }
         $request->validate([
             'page' => 'required|integer',
         ]);
